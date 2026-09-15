@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Screen Signage Stream</title>
+  <style>
+    /* Remove browser margins and hide scrollbars */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #000; /* Black background matches the video player */
+    }
+
+    /* Force the video to take up 100% of the visible viewport */
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 
+    - no-referrer-when-downgrade: Sends the domain origin so YouTube doesn't throw Error 153.
+    - allow="autoplay; fullscreen": Grants the required browser privileges for signage.
+  -->
+  <iframe 
+    src="https://www.youtube.com/embed/iHqqkh_Lths?autoplay=1&mute=1&controls=0&playsinline=1&rel=0&modestbranding=1" 
+    title="Live Stream" 
+    allow="autoplay; fullscreen"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+
+</body>
+</html>
